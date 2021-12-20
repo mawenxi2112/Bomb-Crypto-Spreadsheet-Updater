@@ -1,1 +1,4 @@
-save_log_to_file: True
+daily_progress_table_range: "A16:D60"
+claim_table_range: "F16:I58"
+
+save_log_to_file: true

@@ -1,11 +1,15 @@
 import pygsheets
 import inquirer
 import logging
+import yaml
 from src.logger import logger, date_formatted
 
+stream = open("./config.yaml", 'r')
+cfg = yaml.safe_load(stream)
+
 # Table Variables (Make into config)
-dailyProgressTableRange = "A16:D60"
-claimProgressTable = "F16:I58"
+dailyProgressTableRange = cfg["daily_progress_table_range"]
+claimTableRange = cfg["claim_table_range"]
 
 # Authenticate client access to spreadsheet
 googleConsole = pygsheets.authorize()
@@ -33,8 +37,26 @@ def add_daily_progress_entry():
 
     print("failed to find any empty rows to add new entry!")
 
+
 def add_token_claim_entry():
-    pass
+
+    claimprogresstable = workSheet.range(claimTableRange)
+    for row in claimprogresstable:
+
+        if not row[0].value:
+            date = date_formatted("%d/%m/%Y %I:%M%p")
+            bcoin = input("enter bcoin claimed: ")
+            actualbcoin = input("enter actual bcoin claimed: ")
+
+            workSheet.update_value(row[0].label, date)
+            workSheet.update_value(row[1].label, bcoin)
+            workSheet.update_value(row[3].label, actualbcoin)
+
+            logger("successfully added new entry for daily progress for " + date + " with " + bcoin + " bcoin and " + actualbcoin + " actual bcoin", "green")
+            return
+
+    print("failed to find any empty rsows in claim table to add new entry!")
+
 
 def generate_summary():
     pass
