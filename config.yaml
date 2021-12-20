@@ -1,4 +1,15 @@
 daily_progress_table_range: "A16:D60"
 claim_table_range: "F16:I58"
 
+stat_bcoin_curr_price_cell: "B5"
+stat_bcoin_wallet_cell: "B11"
+stat_bcoin_claimed_cell: "B12"
+stat_bcoin_unclaimed_cell: "B13"
+stat_wallet_total_cell: "B14"
+stat_capital_cell: "E9"
+stat_roi_percentage_cell: "E10"
+stat_roi_days_cell: "E11"
+stat_average_daily_cell: "E12"
+stat_net_profit_cell: "E13"
+
 save_log_to_file: true

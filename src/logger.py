@@ -1,6 +1,7 @@
 from datetime import datetime
 import sys
 import yaml
+import os
 
 stream = open("./config.yaml", 'r')
 cfg = yaml.safe_load(stream)
@@ -17,6 +18,13 @@ COLOR = {
     'white': '\033[97m',
     'red': '\033[91m'
 }
+
+
+def clear_console():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
 
 
 def date_formatted(format = "%d/%m/%Y %I:%M:%S%p"):
