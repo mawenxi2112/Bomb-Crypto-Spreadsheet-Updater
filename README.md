@@ -1,5 +1,5 @@
 # Bomb Crypto Spreadsheet Updater
- A script that is incorporated with my own spreadsheet to track my earnings for the P2E NFT game Bomb Crypto. I'm also using this as an opportunity to pick up more on Python. This script is basically using google sheets as a backend, but you can solely utilise the 
+ A script that is incorporated with my own spreadsheet to track my earnings for the P2E NFT game Bomb Crypto. I'm also using this as an opportunity to pick up more on Python. This script is basically using google sheets as a backend, but you can also solely utilise the google sheets for its own purpose.
  
 This script only works with my own spreadsheet which you can make a copy of from [here](https://docs.google.com/spreadsheets/d/1e2uB5x0Fo6P4a9riHr3zcsDlb8YDo5mlz0L-LLHQafM/edit?usp=sharing). But you can make your own adjustments within the config file to adjust to your own spreadsheet but generally the table design has to be similar to my spreadsheet in order for it to work.
 
