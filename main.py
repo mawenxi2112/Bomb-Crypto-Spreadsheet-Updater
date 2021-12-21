@@ -105,7 +105,8 @@ def generate_summary():
 
 
 def dump_to_csv():
-    pass
+    workSheet.export()
+    logger("successfully dumped csv", "green")
 
 while 1 > 0:
 
