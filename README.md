@@ -50,3 +50,5 @@ python main.py
 ```
 
 ## **Screenshots**
+![Script Summary](https://github.com/mawenxi2112/Bomb-Crypto-Spreadsheet-Updater/blob/main/images/generate%20summary.png)
+![Sheets](https://github.com/mawenxi2112/Bomb-Crypto-Spreadsheet-Updater/blob/main/images/spreadsheet.png)
